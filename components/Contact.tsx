@@ -35,7 +35,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-brand-cream py-28 lg:py-40">
+    <section id="contact" className="bg-brand-cream py-36 lg:py-52">
       <div className="content-container">
         <div className="lg:grid lg:grid-cols-5 lg:gap-20">
           {/* Left: heading */}

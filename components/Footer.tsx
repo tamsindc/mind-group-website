@@ -27,7 +27,7 @@ export default function Footer() {
                 <li key={link}>
                   <a
                     href={`#${link.toLowerCase()}`}
-                    className="font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
+                    className="link-underline font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
                   >
                     {link}
                   </a>
@@ -46,7 +46,7 @@ export default function Footer() {
                 <li key={ind}>
                   <a
                     href="#industries"
-                    className="font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
+                    className="link-underline font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
                   >
                     {ind}
                   </a>
@@ -65,7 +65,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
+                  className="link-underline font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
                 >
                   Get in touch
                 </a>

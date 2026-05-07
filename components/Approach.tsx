@@ -59,7 +59,7 @@ function StepItem({ step, index }: { step: typeof steps[0]; index: number }) {
 
 export default function Approach() {
   return (
-    <section id="approach" className="bg-brand-black noise-overlay py-28 lg:py-40">
+    <section id="approach" className="bg-brand-black noise-overlay py-36 lg:py-52">
       <div className="relative z-10 content-container">
         <AnimateOnScroll>
           <SectionLabel>Our Approach</SectionLabel>

@@ -85,7 +85,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-brand-black noise-overlay py-28 lg:py-40">
+    <section id="services" className="bg-brand-black noise-overlay py-36 lg:py-52">
       <div className="relative z-10 content-container">
         <AnimateOnScroll>
           <SectionLabel>What We Do</SectionLabel>

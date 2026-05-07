@@ -51,7 +51,7 @@ const industries = [
 
 export default function Industries() {
   return (
-    <section id="industries" className="bg-brand-cream py-28 lg:py-40">
+    <section id="industries" className="bg-brand-cream py-36 lg:py-52">
       <div className="content-container">
         <AnimateOnScroll>
           <SectionLabel>Industries We Serve</SectionLabel>

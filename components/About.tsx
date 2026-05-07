@@ -27,7 +27,7 @@ const principles = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-brand-cream py-28 lg:py-40">
+    <section id="about" className="bg-brand-cream py-36 lg:py-52">
       <div className="content-container">
         <div className="lg:grid lg:grid-cols-5 lg:gap-20">
           {/* Left: text (3 cols / 60%) */}
@@ -49,16 +49,30 @@ export default function About() {
                 <p className="font-sans text-brand-gray-light leading-relaxed">
                   We are deliberately small. Engagements are led personally, kept
                   narrow in scope, and judged by the quality of the decisions they
-                  support &mdash; not the size of the deck. Our perspective is informed
-                  by hands-on experience advising small jurisdictions, where the
-                  consequences of getting AI wrong are felt first and the appetite for
-                  honest counsel is highest.
-                </p>
-                <p className="font-sans text-brand-gray-light leading-relaxed">
-                  We work where strategic ambition collides with the systems meant to
-                  govern it.
+                  support &mdash; not the size of the deck.
                 </p>
               </div>
+            </AnimateOnScroll>
+
+            {/* Editorial pull quote */}
+            <AnimateOnScroll delay={0.15}>
+              <blockquote className="my-12 lg:my-16 border-l-2 border-brand-blue pl-6 lg:pl-8">
+                <p
+                  className="font-serif italic text-brand-black leading-[1.2]"
+                  style={{ fontSize: "clamp(1.5rem, 2.6vw, 2.1rem)" }}
+                >
+                  We work where strategic ambition collides with the systems
+                  meant to govern it.
+                </p>
+              </blockquote>
+            </AnimateOnScroll>
+
+            <AnimateOnScroll delay={0.2}>
+              <p className="font-sans text-brand-gray-light leading-relaxed">
+                Our perspective is informed by hands-on experience advising small
+                jurisdictions, where the consequences of getting AI wrong are felt
+                first and the appetite for honest counsel is highest.
+              </p>
             </AnimateOnScroll>
           </div>
 
