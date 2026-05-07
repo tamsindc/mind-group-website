@@ -1,9 +1,39 @@
 "use client";
 
+import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import SectionLabel from "./SectionLabel";
 
+const CONTACT_EMAIL = "tamsin@tamsin.ai";
+
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const name = String(data.get("full-name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const company = String(data.get("company") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+
+    const subject = `Mind Group enquiry from ${name || "website visitor"}`;
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      company ? `Company: ${company}` : null,
+      "",
+      message,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+    setSubmitted(true);
+  }
+
   return (
     <section id="contact" className="bg-white py-28 lg:py-40">
       <div className="content-container">
@@ -36,10 +66,10 @@ export default function Contact() {
                     Email
                   </p>
                   <a
-                    href="mailto:info@mindgroupllc.com"
+                    href={`mailto:${CONTACT_EMAIL}`}
                     className="font-sans text-brand-blue text-sm hover:underline"
                   >
-                    info@mindgroupllc.com
+                    {CONTACT_EMAIL}
                   </a>
                 </div>
               </div>
@@ -50,7 +80,7 @@ export default function Contact() {
           <div className="lg:col-span-3">
             <AnimateOnScroll delay={0.15}>
               <form
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={handleSubmit}
                 className="space-y-6"
                 noValidate
               >
@@ -64,6 +94,7 @@ export default function Contact() {
                     </label>
                     <input
                       id="full-name"
+                      name="full-name"
                       type="text"
                       autoComplete="name"
                       required
@@ -80,6 +111,7 @@ export default function Contact() {
                     </label>
                     <input
                       id="email"
+                      name="email"
                       type="email"
                       autoComplete="email"
                       required
@@ -97,6 +129,7 @@ export default function Contact() {
                   </label>
                   <input
                     id="company"
+                    name="company"
                     type="text"
                     autoComplete="organization"
                     className="w-full bg-transparent border border-black/15 rounded px-4 py-3 font-sans text-sm text-brand-black placeholder-brand-gray-light/60 focus:outline-none focus:border-brand-blue transition-colors duration-200"
@@ -112,18 +145,33 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
                     required
                     className="w-full bg-transparent border border-black/15 rounded px-4 py-3 font-sans text-sm text-brand-black placeholder-brand-gray-light/60 focus:outline-none focus:border-brand-blue transition-colors duration-200 resize-none"
                     placeholder="Tell us about your transformation initiative..."
                   />
                 </div>
-                <button
-                  type="submit"
-                  className="font-sans text-sm px-8 py-3.5 bg-brand-blue text-white rounded hover:bg-[#A88B4D] transition-all duration-300 tracking-wide focus-visible:rounded"
-                >
-                  Send Message
-                </button>
+                <div className="flex flex-wrap items-center gap-4">
+                  <button
+                    type="submit"
+                    className="font-sans text-sm px-8 py-3.5 bg-brand-blue text-white rounded hover:bg-[#A88B4D] transition-all duration-300 tracking-wide focus-visible:rounded"
+                  >
+                    Send Message
+                  </button>
+                  {submitted && (
+                    <p className="font-sans text-sm text-brand-gray-light">
+                      Opening your email app&hellip; if nothing happens, write to{" "}
+                      <a
+                        href={`mailto:${CONTACT_EMAIL}`}
+                        className="text-brand-blue hover:underline"
+                      >
+                        {CONTACT_EMAIL}
+                      </a>
+                      .
+                    </p>
+                  )}
+                </div>
               </form>
             </AnimateOnScroll>
           </div>
