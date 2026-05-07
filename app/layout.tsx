@@ -1,24 +1,23 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 
-const dmSerif = DM_Serif_Display({
-  weight: "400",
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: "--font-dm-serif",
+  variable: "--font-display",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-body",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Mind Group LLC — Technology & Digital Transformation Consultancy",
+  title: "Mind Group — Strategy, Governance & Innovation",
   description:
-    "Mind Group is a New York–based consultancy that partners with organizations across financial services, healthcare, and education to architect and deliver technology-driven transformation at scale.",
+    "Mind Group is a New York–based consultancy advising leaders in government, financial services, healthcare, and education on the strategy, governance, and innovation choices that shape lasting digital transformation.",
   icons: {
     icon: "/favicon.svg",
   },
@@ -32,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSerif.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>

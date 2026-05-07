@@ -38,65 +38,33 @@ export default function Hero() {
         }}
       />
 
-      {/* Abstract architectural composition (right side hero artwork) */}
-      <motion.svg
+      {/* Editorial typographic composition — sculptural ampersand */}
+      <motion.div
         aria-hidden="true"
-        viewBox="0 0 600 800"
-        preserveAspectRatio="xMaxYMid slice"
-        className="hidden lg:block absolute right-0 top-0 h-full w-[55%] xl:w-[50%] pointer-events-none"
+        className="hidden lg:flex absolute inset-y-0 right-0 w-[55%] xl:w-[50%] items-center justify-end pointer-events-none overflow-hidden"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2.4, delay: 0.6, ease: "easeOut" }}
+        transition={{ duration: 2.4, delay: 0.4, ease: "easeOut" }}
       >
-        {/* Concentric arcs sweeping from top-right corner */}
-        <g stroke="#C9A961" fill="none">
-          <circle cx="600" cy="0" r="200" strokeOpacity="0.32" strokeWidth="1" />
-          <circle cx="600" cy="0" r="320" strokeOpacity="0.22" strokeWidth="1" />
-          <circle cx="600" cy="0" r="450" strokeOpacity="0.14" strokeWidth="1" />
-          <circle cx="600" cy="0" r="600" strokeOpacity="0.09" strokeWidth="1" />
-          <circle cx="600" cy="0" r="780" strokeOpacity="0.05" strokeWidth="1" />
-        </g>
+        <span
+          className="font-serif text-white/[0.06] leading-[0.78] italic select-none -mr-20 xl:-mr-28"
+          style={{ fontSize: "clamp(28rem, 50vw, 60rem)" }}
+        >
+          &amp;
+        </span>
+      </motion.div>
 
-        {/* Vertical accent line on far right */}
-        <line x1="595" y1="120" x2="595" y2="680" stroke="#C9A961" strokeOpacity="0.35" strokeWidth="1" />
-
-        {/* Constellation of nodes */}
-        <g fill="#ffffff">
-          <circle cx="350" cy="280" r="2" opacity="0.5" />
-          <circle cx="430" cy="200" r="1.5" opacity="0.4" />
-          <circle cx="500" cy="380" r="1.5" opacity="0.35" />
-          <circle cx="280" cy="430" r="1.5" opacity="0.35" />
-          <circle cx="380" cy="520" r="1" opacity="0.3" />
-          <circle cx="450" cy="610" r="1.5" opacity="0.3" />
-          <circle cx="220" cy="560" r="1" opacity="0.25" />
-          <circle cx="540" cy="260" r="1" opacity="0.25" />
-          <circle cx="190" cy="320" r="1" opacity="0.2" />
-        </g>
-
-        {/* Delicate connecting lines */}
-        <g stroke="#ffffff" strokeOpacity="0.10" strokeWidth="0.5" fill="none">
-          <line x1="350" y1="280" x2="430" y2="200" />
-          <line x1="350" y1="280" x2="430" y2="350" />
-          <line x1="430" y1="350" x2="500" y2="380" />
-          <line x1="430" y1="350" x2="380" y2="520" />
-          <line x1="280" y1="430" x2="380" y2="520" />
-          <line x1="380" y1="520" x2="450" y2="610" />
-        </g>
-
-        {/* Focal accent node with slow pulse */}
-        <g>
-          <circle cx="430" cy="350" r="4" fill="#C9A961" />
-          <circle cx="430" cy="350" r="10" fill="none" stroke="#C9A961" strokeWidth="0.6" strokeOpacity="0.7">
-            <animate attributeName="r" values="10;32;10" dur="4.5s" repeatCount="indefinite" />
-            <animate attributeName="strokeOpacity" values="0.7;0;0.7" dur="4.5s" repeatCount="indefinite" />
-          </circle>
-        </g>
-
-        {/* Tiny rotated typographic mark (top-right) */}
-        <g transform="translate(560, 60)">
-          <line x1="0" y1="0" x2="0" y2="36" stroke="#C9A961" strokeOpacity="0.5" strokeWidth="1" />
-        </g>
-      </motion.svg>
+      {/* Single elegant gold accent — horizontal hairline with bullet (right edge) */}
+      <motion.div
+        aria-hidden="true"
+        className="hidden lg:flex absolute top-1/2 right-0 -translate-y-1/2 z-10 items-center pointer-events-none"
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1.6, delay: 1.2, ease: "easeOut" }}
+      >
+        <span className="h-px w-40 bg-gradient-to-r from-transparent to-brand-blue" />
+        <span className="h-1.5 w-1.5 rounded-full bg-brand-blue ml-3 mr-8" />
+      </motion.div>
 
       {/* Editorial location mark (top right corner) */}
       <div

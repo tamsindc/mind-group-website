@@ -9,8 +9,8 @@
   --color-surface-dark: #111111;
   --color-surface-dark-border: #1a1a1a;
 
-  --font-serif: var(--font-dm-serif), "DM Serif Display", Georgia, serif;
-  --font-sans: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  --font-serif: var(--font-display), "Fraunces", Georgia, serif;
+  --font-sans: var(--font-body), "Inter", system-ui, sans-serif;
 }
 
 :root {
