@@ -96,7 +96,7 @@ export default function Services() {
           {services.map((service, i) => (
             <AnimateOnScroll key={service.title} delay={i * 0.08}>
               <div
-                className="group bg-surface-dark p-8 border border-surface-dark-border hover:border-brand-blue transition-all duration-400 hover:shadow-[0_0_40px_rgba(37,99,235,0.08)] h-full"
+                className="group bg-surface-dark p-8 border border-surface-dark-border hover:border-brand-blue transition-all duration-400 hover:shadow-[0_0_40px_rgba(201,169,97,0.10)] h-full"
                 style={{ minHeight: "220px" }}
               >
                 <div className="text-brand-blue mb-5 transition-transform duration-300 group-hover:scale-110 origin-left">

@@ -38,7 +38,7 @@ export default function Insights() {
         <div className="border-t border-white/8 pt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           {articles.map((article, i) => (
             <AnimateOnScroll key={article.title} delay={i * 0.1}>
-              <article className="group flex flex-col h-full bg-surface-dark border border-surface-dark-border hover:border-brand-blue/40 transition-all duration-400 hover:shadow-[0_0_30px_rgba(37,99,235,0.06)] p-8">
+              <article className="group flex flex-col h-full bg-surface-dark border border-surface-dark-border hover:border-brand-blue/40 transition-all duration-400 hover:shadow-[0_0_30px_rgba(201,169,97,0.08)] p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <span className="font-sans text-xs text-brand-blue tracking-[0.12em] uppercase">
                     {article.category}

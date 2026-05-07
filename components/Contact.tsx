@@ -120,7 +120,7 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="font-sans text-sm px-8 py-3.5 bg-brand-blue text-white rounded hover:bg-blue-700 transition-all duration-300 tracking-wide focus-visible:rounded"
+                  className="font-sans text-sm px-8 py-3.5 bg-brand-blue text-white rounded hover:bg-[#A88B4D] transition-all duration-300 tracking-wide focus-visible:rounded"
                 >
                   Send Message
                 </button>
