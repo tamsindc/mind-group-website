@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import IndustryTicker from "./IndustryTicker";
 
 const fadeUp = (delay: number) => ({
@@ -9,7 +10,23 @@ const fadeUp = (delay: number) => ({
   transition: { duration: 1.0, delay, ease: [0.25, 0, 0, 1] as const },
 });
 
+const ROTATING_WORDS = [
+  "Innovation",
+  "Judgement",
+  "Translation",
+  "Equity",
+] as const;
+
 export default function Hero() {
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setWordIndex((i) => (i + 1) % ROTATING_WORDS.length);
+    }, 3200);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section
       id="hero"
@@ -102,7 +119,26 @@ export default function Hero() {
               style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
               {...fadeUp(0.42)}
             >
-              and Innovation.
+              and{" "}
+              <span className="relative inline-block align-baseline">
+                {/* invisible sentinel reserves the width of the longest word */}
+                <span aria-hidden="true" className="invisible italic">
+                  Translation
+                </span>
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.span
+                    key={ROTATING_WORDS[wordIndex]}
+                    initial={{ opacity: 0, y: 28 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -28 }}
+                    transition={{ duration: 0.55, ease: [0.25, 0, 0, 1] }}
+                    className="absolute inset-0 italic text-brand-blue"
+                  >
+                    {ROTATING_WORDS[wordIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
+              .
             </motion.span>
           </h1>
 
