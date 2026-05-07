@@ -4,9 +4,9 @@ import SectionHeadline from "./SectionHeadline";
 
 const services = [
   {
-    title: "Digital Strategy & Roadmapping",
+    title: "Strategy & Transformation",
     description:
-      "We define the technology vision and build actionable transformation roadmaps aligned to business outcomes.",
+      "We help leadership teams define the vision, set priorities, and shape the roadmaps that turn ambition into measurable change.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
         <path d="M4 36 L16 20 L24 28 L36 8" strokeLinecap="round" strokeLinejoin="round"/>
@@ -17,9 +17,9 @@ const services = [
     ),
   },
   {
-    title: "Enterprise Architecture",
+    title: "Operating Model & Design",
     description:
-      "We design scalable, resilient architectures that modernize legacy systems and unlock operational agility.",
+      "We rethink how organizations are structured to operate — aligning teams, technology, and decision rights to unlock agility.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
         <rect x="6" y="6" width="28" height="7" rx="1"/>
@@ -29,9 +29,9 @@ const services = [
     ),
   },
   {
-    title: "Cloud & Infrastructure",
+    title: "Innovation Advisory",
     description:
-      "We migrate, optimize, and manage cloud environments across AWS, Azure, and GCP for peak performance.",
+      "We help leaders identify where to place bets, design innovation programs, and turn experimentation into enterprise capability.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
         <path d="M10 28 C6 28 4 24 6 21 C7 18 10 17 13 18 C14 14 18 11 23 12 C28 13 31 18 29 23" strokeLinecap="round"/>
@@ -43,9 +43,9 @@ const services = [
     ),
   },
   {
-    title: "Data & AI Solutions",
+    title: "AI Strategy & Governance",
     description:
-      "We build data platforms and deploy AI/ML capabilities that turn information into competitive advantage.",
+      "We advise leaders on responsible AI adoption — the policies, governance, and capability-building that turn AI from risk into advantage.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
         <polygon points="20,4 27,12 35,14 29,22 30,31 20,27 10,31 11,22 5,14 13,12"/>
@@ -54,9 +54,9 @@ const services = [
     ),
   },
   {
-    title: "Cybersecurity & Risk",
+    title: "Risk, Trust & Compliance",
     description:
-      "We embed security-by-design across the enterprise, from zero-trust frameworks to regulatory compliance.",
+      "We help organizations build trust by design — strengthening governance, regulatory readiness, and the controls that protect reputation.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
         <path d="M20 5 L34 11 L34 22 C34 30 27 36 20 38 C13 36 6 30 6 22 L6 11 Z" strokeLinejoin="round"/>
@@ -65,9 +65,9 @@ const services = [
     ),
   },
   {
-    title: "Program Delivery & PMO",
+    title: "Program Leadership",
     description:
-      "We lead large-scale transformation programs with disciplined governance, ensuring on-time, on-budget delivery.",
+      "We lead complex transformation programs with disciplined governance, ensuring strategy translates into delivery.",
     icon: (
       <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8">
         <rect x="5" y="5" width="12" height="12" rx="1"/>

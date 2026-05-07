@@ -4,36 +4,47 @@ import SectionHeadline from "./SectionHeadline";
 
 const industries = [
   {
+    name: "Government & Public Sector",
+    description:
+      "We advise governments and public institutions on AI strategy, digital transformation, and the governance frameworks that build public trust. Our work spans national strategy development, regulatory design, and the operating models that turn policy ambition into delivery.",
+    capabilities: [
+      "National AI & digital strategy",
+      "Governance & regulatory frameworks",
+      "Public-sector innovation programs",
+      "Cross-jurisdictional advisory",
+    ],
+  },
+  {
     name: "Financial Services",
     description:
-      "From core banking modernization to regulatory technology, we help financial institutions transform their technology infrastructure while navigating complex compliance landscapes. Our teams have delivered transformation programs for banks, insurance carriers, asset managers, and fintech platforms.",
+      "We help financial institutions navigate the strategic and regulatory shifts reshaping the industry — from AI adoption and risk governance to operating-model redesign. Our teams advise banks, insurers, asset managers, and fintech platforms on the choices that matter most.",
     capabilities: [
-      "Core banking transformation",
-      "Regulatory compliance (SOX, Basel, AML/KYC)",
-      "Payment system modernization",
-      "Risk analytics platforms",
+      "AI & data governance",
+      "Regulatory strategy (SOX, Basel, AML/KYC)",
+      "Operating-model transformation",
+      "Innovation & growth advisory",
     ],
   },
   {
     name: "Healthcare",
     description:
-      "We enable healthcare organizations to improve patient outcomes through technology — from EHR integration and interoperability to telehealth platforms and clinical data analytics. We understand HIPAA, HL7/FHIR, and the regulatory environment deeply.",
+      "We partner with healthcare leaders on the strategy and governance choices behind better outcomes — from AI adoption and data ethics to digital service design. Our focus is on what gets decided in the boardroom, not what gets built in the basement.",
     capabilities: [
-      "EHR/EMR integration",
-      "Telehealth platforms",
-      "Clinical analytics",
-      "HIPAA-compliant infrastructure",
+      "Digital health strategy",
+      "AI ethics & data governance",
+      "Patient-experience transformation",
+      "Innovation portfolio advisory",
     ],
   },
   {
     name: "Education",
     description:
-      "We partner with educational institutions and EdTech organizations to modernize learning platforms, improve operational efficiency, and create data-driven student experiences at scale.",
+      "We work with educational institutions and EdTech leaders on the strategy, policy, and innovation agendas that prepare learners for an AI-shaped economy — from curriculum and workforce design to institutional transformation.",
     capabilities: [
-      "LMS modernization",
-      "Student information systems",
-      "Data analytics for outcomes",
-      "Digital campus infrastructure",
+      "AI in education strategy",
+      "Workforce & curriculum design",
+      "Institutional transformation",
+      "Policy & innovation advisory",
     ],
   },
 ];
@@ -90,7 +101,7 @@ export default function Industries() {
 
         <AnimateOnScroll delay={0.1}>
           <p className="mt-16 font-sans text-sm text-brand-gray-light border-t border-black/8 pt-8">
-            We also serve clients in government, retail, energy, logistics, and other sectors.
+            We also advise clients across insurance, energy, retail, and other sectors where strategy, governance, and innovation intersect.
           </p>
         </AnimateOnScroll>
       </div>

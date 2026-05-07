@@ -1,11 +1,11 @@
 const ITEMS = [
+  "Government",
   "Financial Services",
   "Healthcare",
   "Education",
   "Insurance",
-  "Government",
-  "Retail",
   "Energy",
+  "Retail",
   "Logistics",
 ];
 
