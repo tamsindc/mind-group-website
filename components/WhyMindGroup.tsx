@@ -27,7 +27,7 @@ const differentiators = [
 
 export default function WhyMindGroup() {
   return (
-    <section id="why" className="bg-white py-28 lg:py-40">
+    <section id="why" className="bg-brand-cream py-28 lg:py-40">
       <div className="content-container">
         <AnimateOnScroll>
           <SectionLabel>Why Mind Group</SectionLabel>

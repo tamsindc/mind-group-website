@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import Industries from "@/components/Industries";
 import Approach from "@/components/Approach";
 import WhyMindGroup from "@/components/WhyMindGroup";
-import Insights from "@/components/Insights";
+import Manifesto from "@/components/Manifesto";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,7 +20,7 @@ export default function Home() {
         <Industries />
         <Approach />
         <WhyMindGroup />
-        <Insights />
+        <Manifesto />
         <Contact />
       </main>
       <Footer />

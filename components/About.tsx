@@ -11,7 +11,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-white py-28 lg:py-40">
+    <section id="about" className="bg-brand-cream py-28 lg:py-40">
       <div className="content-container">
         <div className="lg:grid lg:grid-cols-5 lg:gap-20">
           {/* Left: text (3 cols / 60%) */}

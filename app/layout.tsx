@@ -15,11 +15,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.themindgroup.co"),
   title: "Mind Group — Strategy, Governance & Innovation",
   description:
     "Mind Group is a New York–based consultancy advising leaders in government, financial services, healthcare, and education on the strategy, governance, and innovation choices that shape lasting digital transformation.",
   icons: {
     icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "Mind Group — Strategy, Governance & Innovation",
+    description:
+      "An advisory firm bringing the perspective of small jurisdictions to global problems, and the rigour of governance to fast-moving technology.",
+    type: "website",
   },
 };
 

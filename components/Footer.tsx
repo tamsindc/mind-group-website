@@ -1,4 +1,4 @@
-const quickLinks = ["About", "Services", "Industries", "Insights", "Contact"];
+const quickLinks = ["About", "Services", "Industries", "Approach", "Contact"];
 const industryLinks = ["Government", "Financial Services", "Healthcare", "Education"];
 
 export default function Footer() {
