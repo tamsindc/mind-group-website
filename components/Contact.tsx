@@ -5,33 +5,34 @@ import AnimateOnScroll from "./AnimateOnScroll";
 import SectionLabel from "./SectionLabel";
 
 const CONTACT_EMAIL = "tamsin@tamsin.ai";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnjwbpvp";
+
+type SubmitState = "idle" | "submitting" | "success" | "error";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [state, setState] = useState<SubmitState>("idle");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const name = String(data.get("full-name") ?? "").trim();
-    const email = String(data.get("email") ?? "").trim();
-    const company = String(data.get("company") ?? "").trim();
-    const message = String(data.get("message") ?? "").trim();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    setState("submitting");
 
-    const subject = `Mind Group enquiry from ${name || "website visitor"}`;
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      company ? `Company: ${company}` : null,
-      "",
-      message,
-    ]
-      .filter(Boolean)
-      .join("\n");
-
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (res.ok) {
+        setState("success");
+        form.reset();
+      } else {
+        setState("error");
+      }
+    } catch {
+      setState("error");
+    }
   }
 
   return (
@@ -155,20 +156,26 @@ export default function Contact() {
                 <div className="flex flex-wrap items-center gap-4">
                   <button
                     type="submit"
-                    className="font-sans text-sm px-8 py-3.5 bg-brand-blue text-white rounded hover:bg-[#A88B4D] transition-all duration-300 tracking-wide focus-visible:rounded"
+                    disabled={state === "submitting"}
+                    className="font-sans text-sm px-8 py-3.5 bg-brand-blue text-white rounded hover:bg-[#A88B4D] transition-all duration-300 tracking-wide focus-visible:rounded disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {state === "submitting" ? "Sending…" : "Send Message"}
                   </button>
-                  {submitted && (
+                  {state === "success" && (
+                    <p className="font-sans text-sm text-brand-black">
+                      Thank you &mdash; your message has been sent.
+                    </p>
+                  )}
+                  {state === "error" && (
                     <p className="font-sans text-sm text-brand-gray-light">
-                      Opening your email app&hellip; if nothing happens, write to{" "}
+                      Something went wrong. Please email{" "}
                       <a
                         href={`mailto:${CONTACT_EMAIL}`}
                         className="text-brand-blue hover:underline"
                       >
                         {CONTACT_EMAIL}
-                      </a>
-                      .
+                      </a>{" "}
+                      directly.
                     </p>
                   )}
                 </div>
