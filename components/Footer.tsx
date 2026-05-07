@@ -1,5 +1,5 @@
-const quickLinks = ["About", "Services", "Industries", "Insights", "Careers"];
-const industryLinks = ["Financial Services", "Healthcare", "Education"];
+const quickLinks = ["About", "Services", "Industries", "Insights", "Contact"];
+const industryLinks = ["Government", "Financial Services", "Healthcare", "Education"];
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
               Mind Group
             </p>
             <p className="font-sans text-brand-gray-dark text-xs leading-relaxed">
-              Technology &amp; Digital Transformation Consultancy
+              Strategy, Governance &amp; Innovation
             </p>
           </div>
 
@@ -64,23 +64,10 @@ export default function Footer() {
               <li className="font-sans text-sm text-brand-gray-dark">New York, NY</li>
               <li>
                 <a
-                  href="mailto:info@mindgroupllc.com"
+                  href="#contact"
                   className="font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
                 >
-                  info@mindgroupllc.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  aria-label="Mind Group on LinkedIn"
-                  className="inline-flex items-center gap-2 font-sans text-sm text-brand-gray-dark hover:text-white transition-colors duration-200"
-                >
-                  {/* LinkedIn icon — simple SVG */}
-                  <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4" aria-hidden="true">
-                    <path d="M5 3a2 2 0 100 4 2 2 0 000-4zM3 8h4v9H3V8zm6 0h3.8v1.3C13.3 8.5 14.3 8 16 8c2.8 0 4 1.7 4 5v4h-4v-3.5c0-1.3-.5-2-1.5-2s-2 .7-2 2V17H9V8z"/>
-                  </svg>
-                  LinkedIn
+                  Get in touch
                 </a>
               </li>
             </ul>

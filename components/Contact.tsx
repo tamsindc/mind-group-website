@@ -4,7 +4,6 @@ import { useState } from "react";
 import AnimateOnScroll from "./AnimateOnScroll";
 import SectionLabel from "./SectionLabel";
 
-const CONTACT_EMAIL = "tamsin@tamsin.ai";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xnjwbpvp";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
@@ -61,17 +60,6 @@ export default function Contact() {
                   <p className="font-sans text-brand-gray-light text-sm">
                     Mind Group LLC · New York, NY
                   </p>
-                </div>
-                <div>
-                  <p className="font-sans text-xs text-brand-gray-light tracking-[0.1em] uppercase mb-1">
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${CONTACT_EMAIL}`}
-                    className="font-sans text-brand-blue text-sm hover:underline"
-                  >
-                    {CONTACT_EMAIL}
-                  </a>
                 </div>
               </div>
             </AnimateOnScroll>
@@ -168,14 +156,7 @@ export default function Contact() {
                   )}
                   {state === "error" && (
                     <p className="font-sans text-sm text-brand-gray-light">
-                      Something went wrong. Please email{" "}
-                      <a
-                        href={`mailto:${CONTACT_EMAIL}`}
-                        className="text-brand-blue hover:underline"
-                      >
-                        {CONTACT_EMAIL}
-                      </a>{" "}
-                      directly.
+                      Something went wrong. Please try again in a moment.
                     </p>
                   )}
                 </div>

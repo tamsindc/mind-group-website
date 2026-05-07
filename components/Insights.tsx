@@ -53,11 +53,11 @@ export default function Insights() {
                   {article.excerpt}
                 </p>
                 <a
-                  href="#"
+                  href="#contact"
                   className="font-sans text-sm text-brand-blue hover:text-white transition-colors duration-200 tracking-wide inline-flex items-center gap-2"
-                  aria-label={`Read more: ${article.title}`}
+                  aria-label={`Discuss: ${article.title}`}
                 >
-                  Read More
+                  Discuss
                   <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1">→</span>
                 </a>
               </article>
